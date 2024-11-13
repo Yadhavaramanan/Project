@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition & Translation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.socket.io/4.1.3/socket.io.min.js"></script>
+</head>
+<body>
+    <button class="toggle-theme" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="container">
+        <h1>Speech Recognition & Translator</h1>
+        
+        <!-- Speech-to-Text and Translation Section -->
+        <button id="start-recording-btn" onclick="startRecording()">Start Recording</button>
+        <div id="recording-indicator"></div>
+        <div id="output">Your text will appear here...</div>
+
+        <!-- Language Selection for Translation -->
+        <select id="languageSelect">
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ta">Tamil</option>
+            <!-- Add more languages here -->
+        </select>
+        
+        <button onclick="translateText()">Translate Transcribed Text</button>
+        <p id="translatedText">Translated text will appear here...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename= 'app.js') }}"></script>
+</body>
+</html>

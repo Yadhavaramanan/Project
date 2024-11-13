@@ -1,0 +1,124 @@
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d4bee4;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1e1e2f;
+    color: #e4e4e7;
+}
+
+.container {
+    text-align: center;
+    background: #9B7EBD;
+    padding: 200px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px #a97eda;
+}
+
+
+body.dark-mode .container {
+    background-color: #2a2a3d;
+}
+
+h1, .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #d4bee4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button, select {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    background-color: #3B1E54;
+    color: white;
+}
+
+button:hover {
+    background-color: hsl(272, 52%, 59%);
+}
+
+body.dark-mode button {
+    background-color: #444466;
+}
+
+#translatedText, #output {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+body.dark-mode #translatedText, body.dark-mode #output {
+    background-color: #33334d;
+}
+
+#recording-indicator {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 123, 255, 0.2);
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dark Mode Toggle Button */
+.toggle-theme {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode .toggle-theme {
+    background-color: #8888ff;
+    color: #333;
+}
