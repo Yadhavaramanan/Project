@@ -19,7 +19,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/flash-speech-to-text.git
+   git clone (https://github.com/Yadhavaramanan/Speech_to_Text)
    ```
 
 2. Open the `index.html` file in your preferred browser.
